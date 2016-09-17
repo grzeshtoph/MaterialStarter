@@ -1,4 +1,4 @@
-<div class="container main" layout="column">
+<div class="container main" layout="column" ng-controller="userController as uCtrl ">
     <md-toolbar>
         <h1>Persons</h1>
     </md-toolbar>
@@ -6,34 +6,18 @@
     <div class="container" layout="row" flex>
         <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
             <md-list>
-                <md-list-item>
-                    <md-button>
-                        <md-icon md-svg-src="/svg/avatar-1.svg" class="avatar"></md-icon>
-                        Greg Smorag
-                    </md-button>
-                </md-list-item>
-                <md-list-item>
-                    <md-button>
-                        <md-icon md-svg-src="/svg/avatar-2.svg" class="avatar"></md-icon>
-                        Elen Hickey
-                    </md-button>
-                </md-list-item>
-                <md-list-item>
-                    <md-button>
-                        <md-icon md-svg-src="/svg/avatar-3.svg" class="avatar"></md-icon>
-                        Chrisine Attorney
+                <md-list-item ng-repeat="u in uCtrl.users">
+                    <md-button class="btn-left" flex ng-click="uCtrl.selectUser(u)">
+                        <md-icon md-svg-src="{{u.avatar}}" class="avatar"></md-icon>
+                        {{ u.name  }}
                     </md-button>
                 </md-list-item>
             </md-list>
         </md-sidenav>
-        <md-content id="content" flex>
-            <md-icon md-svg-src="/svg/avatar-1.svg" class="avatar"></md-icon>
-            <h2>Greg Smorag</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et arcu tellus. Curabitur ornare
-                aliquam urna, ac facilisis elit consectetur at. Donec venenatis, massa et egestas vestibulum, sapien
-                nunc ornare purus, ac fringilla enim nisl quis sem. Nulla eleifend nulla vel ex elementum vestibulum.
-                Nulla facilisi. Proin in nibh dolor. Quisque mollis dolor a sapien tempus, id imperdiet sapien
-                elementum.</p>
+        <md-content id="content" class="content-right" flex>
+            <md-icon md-svg-src="{{ uCtrl.selected.avatar }}" class="avatar"></md-icon>
+            <h2>{{ uCtrl.selected.name }}</h2>
+            <p>{{ uCtrl.selected.content }}</p>
         </md-content>
     </div>
 </div>

@@ -20,6 +20,13 @@ html, body{
     -webkit-transform: scale(0.70);
     -moz-transform: scale(0.70);
 }
+.btn-left {
+    text-align: left;
+}
+.content-right {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .main{
     height: 100%;
 }

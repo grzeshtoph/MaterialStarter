@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512">
+    <defs>
+        <svg id="greg-smorag" viewBox="0 0 128 128" height="100%" width="100%">
+            <circle cx="64" cy="64" r="44" stroke="black" fill="red" />
+        </svg>
+        <svg id="lia-lugo" viewBox="0 0 128 128" height="100%" width="100%">
+            <circle cx="64" cy="64" r="44" stroke="black" fill="green" />
+        </svg>
+        <svg id="george-duke" viewBox="0 0 128 128" height="100%" width="100%">
+            <circle cx="64" cy="64" r="44" stroke="black" fill="yellow" />
+        </svg>
+        <svg id="gener-delosreyes" viewBox="0 0 128 128" height="100%" width="100%">
+            <circle cx="64" cy="64" r="44" stroke="black" fill="blue" />
+        </svg>
+        <svg id="lawrence-ray" viewBox="0 0 128 128" height="100%" width="100%">
+            <circle cx="64" cy="64" r="44" stroke="black" fill="orange" />
+        </svg>
+    </defs>
+</svg>
