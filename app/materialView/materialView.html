@@ -28,7 +28,7 @@
             <h2>{{ uCtrl.selected.name }}</h2>
             <p>{{ uCtrl.selected.content }}</p>
 
-            <md-button class="md-fab md-fab-bottom-right" ng-click="uCtrl.share($event)" aria-label="Share">
+            <md-button class="md-fab md-fab-bottom-right" ng-click="uCtrl.share(uCtrl.selected)" aria-label="Share with {{ uCtrl.selected.name }}">
                 <md-icon md-svn-icon="share"></md-icon>
             </md-button>
         </md-content>
