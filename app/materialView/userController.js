@@ -2,12 +2,13 @@
     'use strict';
 
     angular.module('users').controller('userController',
-        ['userService', function (userService) {
+        ['userService', '$mdSidenav', function (userService, $mdSidenav) {
             var self = this;
 
             self.selected = null;
             self.users = [];
             self.selectUser = selectUser;
+            self.toggleList = toggleUserList;
 
             /**
              * Loads all users
@@ -21,5 +22,8 @@
                 self.selected = angular.isNumber(user) ? self.users[user] : user;
             }
 
+            function toggleUserList() {
+                $mdSidenav('left').toggle();
+            }
         }]);
 })();

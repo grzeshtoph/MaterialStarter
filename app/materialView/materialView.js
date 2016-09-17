@@ -1,14 +1,10 @@
 (function() {
   'use strict';
 
-  angular.module('myApp.materialView', ['ngRoute'])
+  angular.module('materialView', ['ngRoute'])
       .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/materialView', {
-          templateUrl: 'materialView/materialView.html',
-          controller: 'MaterialViewCtrl'
+          templateUrl: 'materialView/materialView.html'
         });
-      }])
-      .controller('MaterialViewCtrl', [function () {
-
       }]);
 })();

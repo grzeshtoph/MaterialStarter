@@ -12,19 +12,20 @@
 
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
-  <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
-  <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
-  <script src="/bower_components/angular-material/angular-material.min.js"></script>
-  <script src="users.js"></script>
-  <script src="userService.js"></script>
-  <script src="userController.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="bower_components/angular-material/angular-material.min.js"></script>
+  <script src="materialView/users.js"></script>
+  <script src="materialView/userService.js"></script>
+  <script src="materialView/userController.js"></script>
   <script src="app.js"></script>
   <script src="materialView/materialView.js"></script>
 
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'>
   <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="assets/app.css">
 </head>
-<body ng-view>
+<body ng-view ng-cloak>
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->

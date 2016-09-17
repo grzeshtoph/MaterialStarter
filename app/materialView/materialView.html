@@ -1,23 +1,36 @@
-<div class="container main" layout="column" ng-controller="userController as uCtrl ">
-    <md-toolbar>
-        <h1>Persons</h1>
+<div class="container main" layout="column" ng-controller="userController as uCtrl" ng-cloak>
+    <!--Container #1-->
+    <md-toolbar layout="row" class="md-toolbar-tools">
+        <md-button class="menu md-icon-button" hide-gt-sm ng-click="uCtrl.toggleList()" aria-label="Show User List">
+            <md-icon md-svg-icon="menu"></md-icon>
+        </md-button>
+        <h1>Angular Material Starter</h1>
     </md-toolbar>
 
+    <!--Container #2-->
     <div class="container" layout="row" flex>
-        <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
+        <!--Container #3-->
+        <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left"
+                    ng-click="uCtrl.toggleList()" class="md-whiteframe-4dp">
             <md-list>
                 <md-list-item ng-repeat="u in uCtrl.users">
-                    <md-button class="btn-left" flex ng-click="uCtrl.selectUser(u)">
+                    <md-button class="btn-left" ng-class="{'selected' : u === uCtrl.selected}" ng-click="uCtrl.selectUser(u)">
                         <md-icon md-svg-src="{{u.avatar}}" class="avatar"></md-icon>
                         {{ u.name  }}
                     </md-button>
                 </md-list-item>
             </md-list>
         </md-sidenav>
-        <md-content id="content" class="content-right" flex>
+
+        <!--Container #4-->
+        <md-content id="content" flex>
             <md-icon md-svg-src="{{ uCtrl.selected.avatar }}" class="avatar"></md-icon>
             <h2>{{ uCtrl.selected.name }}</h2>
             <p>{{ uCtrl.selected.content }}</p>
+
+            <md-button class="md-fab md-fab-bottom-right" ng-click="uCtrl.share($event)" aria-label="Share">
+                <md-icon md-svn-icon="share"></md-icon>
+            </md-button>
         </md-content>
     </div>
 </div>
